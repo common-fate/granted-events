@@ -1,18 +1,20 @@
 package types
 
+const GrantEventPrefix = "GRANT_"
+
 const (
 	//GrantStart is emitted when a grant is provisioned successfully
-	GrantStart EventType = "GRANT_START"
+	GrantStart EventType = GrantEventPrefix + "START"
 	//GrantEnd is emitted when a grant is deprovisioned successfully
-	GrantEnd EventType = "GRANT_END"
+	GrantEnd EventType = GrantEventPrefix + "END"
 	//GrantRevoke is emitted when a grant is deprovisioned on demand successfully
-	GrantRevoke EventType = "GRANT_REVOKE"
+	GrantRevoke EventType = GrantEventPrefix + "REVOKE"
 	//GrantStartFailure is emitted when a grant fails to be provisioned successfully
-	GrantStartFailure EventType = "GRANT_START_FAILURE"
+	GrantStartFailure EventType = GrantEventPrefix + "START_FAILURE"
 	//GrantEndFailure is emitted when a grant fails to be deprovisioned successfully
-	GrantEndFailure EventType = "GRANT_END_FAILURE"
+	GrantEndFailure EventType = GrantEventPrefix + "END_FAILURE"
 	//GrantRevokeFailure is emitted when a grant fails to be deprovisioned on demand successfully
-	GrantRevokeFailure EventType = "GRANT_REVOKE_FAILURE"
+	GrantRevokeFailure EventType = GrantEventPrefix + "REVOKE_FAILURE"
 )
 
 type GrantError struct {

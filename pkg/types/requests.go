@@ -1,10 +1,11 @@
 package types
 
+const RequestEventPrefix = "REQUEST_"
 const (
 	//RequestCreated is emitted when a request is created
-	RequestCreated EventType = "REQUEST_CREATED"
+	RequestCreated EventType = RequestEventPrefix + "CREATED"
 	//RequestApproved is emitted when a request is approved
-	RequestApproved EventType = "REQUEST_APPROVED"
+	RequestApproved EventType = RequestEventPrefix + "APPROVED"
 )
 
 //RequestEvent
